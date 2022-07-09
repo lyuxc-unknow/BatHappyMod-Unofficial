@@ -1,4 +1,4 @@
-package bathayypmod;
+package bathappymod;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;

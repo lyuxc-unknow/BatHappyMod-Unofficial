@@ -1,4 +1,4 @@
-package bathayypmod;
+package bathappymod;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModList;
@@ -28,7 +28,6 @@ public class BatHappyModConfig {
         if(BatHappyModConfig.banMods.get().toString().equalsIgnoreCase("bathappymod_unofficial") || banMods.get().isEmpty()) {
             banMods.get().remove("bathappymod_unofficial");
             banMods.set(Arrays.asList(BatHappyMod.banModId));
-            //throw new RuntimeException("Mod list is null");
         }
         for(String modIds : BatHappyModConfig.banMods.get()) {
             if(ModList.get().isLoaded(modIds)) {
