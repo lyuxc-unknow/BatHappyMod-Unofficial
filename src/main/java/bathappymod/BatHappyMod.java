@@ -8,8 +8,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod("bathappymod_unofficial")
+@Mod(BatHappyMod.MOD_ID)
 public class BatHappyMod {
+    public static final String MOD_ID = "bathappymod_unofficial";
     public static final Logger LOGGER = LogManager.getLogger("bathappymod_unofficial");
 
     public static final String[] banModId = new String[] {
