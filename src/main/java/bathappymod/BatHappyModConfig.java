@@ -27,7 +27,7 @@ public class BatHappyModConfig {
         BatHappyMod.LOGGER.info("hello world");
         if(BatHappyModConfig.banMods.get().contains(BatHappyMod.MOD_ID)
                 || banMods.get().isEmpty()
-                ||BatHappyModConfig.banMods.get().contains("")) {
+                || BatHappyModConfig.banMods.get().contains("")) {
             banMods.get().remove(BatHappyMod.MOD_ID);
             banMods.set(Arrays.asList(BatHappyMod.banModId));
         }
