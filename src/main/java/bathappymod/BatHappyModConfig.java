@@ -25,7 +25,9 @@ public class BatHappyModConfig {
 
     public static void init(FMLCommonSetupEvent event) {
         BatHappyMod.LOGGER.info("hello world");
-        if(BatHappyModConfig.banMods.get().contains(BatHappyMod.MOD_ID) || banMods.get().isEmpty()) {
+        if(BatHappyModConfig.banMods.get().contains(BatHappyMod.MOD_ID)
+                || banMods.get().isEmpty()
+                ||BatHappyModConfig.banMods.get().contains("")) {
             banMods.get().remove(BatHappyMod.MOD_ID);
             banMods.set(Arrays.asList(BatHappyMod.banModId));
         }
