@@ -9,9 +9,9 @@ import java.util.List;
 
 public class BatHappyModConfig {
     public static ForgeConfigSpec CommonConfig;
-    private static final ForgeConfigSpec.ConfigValue<List<? extends String>> banMods;
-    private static final ForgeConfigSpec.ConfigValue<? extends String> crashTip;
-    private static final ForgeConfigSpec.BooleanValue showModid;
+    public static final ForgeConfigSpec.ConfigValue<List<? extends String>> banMods;
+    public static final ForgeConfigSpec.ConfigValue<? extends String> crashTip;
+    public static final ForgeConfigSpec.BooleanValue showModid;
 
     static {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
