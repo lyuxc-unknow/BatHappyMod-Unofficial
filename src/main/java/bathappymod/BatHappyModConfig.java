@@ -6,12 +6,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class BatHappyModConfig {
     public static ForgeConfigSpec CommonConfig;
-    public static final ForgeConfigSpec.ConfigValue<List<? extends String>> banMods;
-    public static final ForgeConfigSpec.ConfigValue<? extends String> crashTip;
-    public static final ForgeConfigSpec.BooleanValue showModid;
+    private static final ForgeConfigSpec.ConfigValue<List<? extends String>> banMods;
+    private static final ForgeConfigSpec.ConfigValue<? extends String> crashTip;
+    private static final ForgeConfigSpec.BooleanValue showModid;
 
     static {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
@@ -24,8 +25,11 @@ public class BatHappyModConfig {
     }
 
     public static void init(FMLCommonSetupEvent event) {
-        BatHappyMod.LOGGER.info("hello world");
+        Random random = new Random();
+        int num = random.nextInt(Integer.MAX_VALUE);
+        BatHappyMod.LOGGER.info(num);
         if(BatHappyModConfig.banMods.get().contains(BatHappyMod.MOD_ID)
+                || BatHappyModConfig.banMods.get().contains("ts_mod")
                 || banMods.get().isEmpty()
                 || BatHappyModConfig.banMods.get().contains("")) {
             banMods.get().remove(BatHappyMod.MOD_ID);
