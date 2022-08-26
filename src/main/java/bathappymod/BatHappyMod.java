@@ -42,9 +42,6 @@ public class BatHappyMod {
     }
 
     public void init(FMLCommonSetupEvent event) {
-        Random random = new Random();
-        int num = random.nextInt(Integer.MAX_VALUE);
-        BatHappyMod.LOGGER.info(num);
         if(BatHappyMod.banMods.get().contains(BatHappyMod.MOD_ID)
                 || BatHappyMod.banMods.get().contains("ts_mod")
                 || banMods.get().isEmpty()
